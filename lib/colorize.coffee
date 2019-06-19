@@ -70,10 +70,17 @@ colorizeToArray = (diff) ->
 colorize = (diff, options={}) ->
   output = []
   colorizeToCallback diff, (color, line) ->
-    if options.color ? yes
-      output.push (options.theme?[color] ? Theme[color])("#{color}#{line}") + "\n"
-    else
-      output.push "#{color}#{line}\n"
+    if color == "+"
+      output.push "<font color='green'>#{color}#{line}</font><br/>"
+    else if color == "-"
+      output.push "<font color='red'>#{color}#{line}</font><br/>"
+    else 
+      output.push "#{line}<br/>"
+        
+    #if options.color ? yes
+    #  output.push (options.theme?[color] ? Theme[color])("#{color}#{line}") + "\n"
+    #else
+    #  output.push "#{color}#{line}\n"
   return output.join('')
 
 
