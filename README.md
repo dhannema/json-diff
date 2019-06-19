@@ -1,4 +1,6 @@
-This branch changes the CLI coloring to HTML coloring
+This branch has the following updates:
+ 1. changes the CLI coloring to HTML coloring
+ 2. packages have been upgraded
 
 
 JSON structural diff
