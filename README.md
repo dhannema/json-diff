@@ -1,3 +1,6 @@
+This branch changes the CLI coloring to HTML coloring
+
+
 JSON structural diff
 ====================
 
